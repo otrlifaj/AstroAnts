@@ -40,11 +40,11 @@ namespace AstroAnts
             var firstGroup = firstGroupString.Split(' ');
             var secondGroup = secondGroupString.Split(' ');
             var countParsed = int.TryParse(stepsCountString, out int countOfSteps);
-            
+
             if (countParsed)
             {
-            var astroAntManager = new AstroAntManager(firstGroup, secondGroup);
-            astroAntManager.Overstep(countOfSteps);
+                var astroAntManager = new AstroAntManager(firstGroup, secondGroup);
+                astroAntManager.Overstep(countOfSteps);
             }
             else
             {
@@ -76,6 +76,7 @@ namespace AstroAnts
             {
                 Console.WriteLine("Byly zadány vstupy v nesprávném formátu.");
             }
+
             Console.ReadLine();
         }
     }

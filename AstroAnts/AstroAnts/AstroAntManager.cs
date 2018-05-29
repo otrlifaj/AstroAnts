@@ -65,14 +65,14 @@ namespace AstroAnts
             OverstepStatus.AddRange(SecondGroup);
         }
 
-        public string GetInfo(int stepNumber)
+        private string GetInfo(int stepNumber)
         {
             string status = "Krok " + stepNumber + ":";
             string names = GetAntNames();
             return new StringBuilder().AppendLine(status).AppendLine(names).ToString();
         }
 
-        public string GetInitialInfo()
+        private string GetInitialInfo()
         {
             string status = "Počáteční stav:";
             string names = GetAntNames();
@@ -89,7 +89,7 @@ namespace AstroAnts
             return sb.ToString();
         }
 
-        public bool OverstepIteration()
+        private bool OverstepIteration()
         {
             int[] firstGroupIndexes = new int[FirstGroup.Count];
             int i = 0;
